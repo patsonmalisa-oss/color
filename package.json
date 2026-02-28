@@ -1,0 +1,32 @@
+{
+  "name": "greens-marketplace",
+  "version": "1.0.0",
+  "description": "Next-generation niche marketplace with AI-driven curation",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && go run main.go",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && go mod tidy",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "keywords": [
+    "marketplace",
+    "niche",
+    "ai",
+    "curation",
+    "community"
+  ],
+  "author": "Greens Team",
+  "license": "MIT"
+}
